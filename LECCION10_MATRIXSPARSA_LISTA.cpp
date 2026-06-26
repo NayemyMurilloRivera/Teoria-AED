@@ -135,7 +135,8 @@ void sparsa::insert(int x, int y, int v) {
         return;
     }
 
-
+ // Insertar al final → necesitas recorrer toda la lista hasta nullptr, más lento
+//Insertar al inicio → reasignas la cabeza directamente, O(1), más rápido , esto es lo que se utilizo
     //no existe en h
     nodito* nuevo = new nodito(x, y, v); // otro puntero otro nodo, no se ni donde esta
     nuevo->next = head; //head->[0.2]->nullptr ----- nuevo->[0.2]->null
