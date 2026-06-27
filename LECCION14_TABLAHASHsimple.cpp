@@ -28,7 +28,9 @@ class tablahash {
     list<string> table[101];  // tamaño máximo que usaremos
     int tamano;
     int (*hashfn)(string, int);  // puntero a la función hash
-
+        //  ↑          ↑      ↑
+        //  puntero    parámetro1  parámetro2
+        //  a función  que recibe
 public:
     tablahash(int tam, int (*fn)(string, int)) {
         tamano = tam;
@@ -47,6 +49,7 @@ public:
         }
         return false;
     }
+
 
     void contarcoli() {
         int cont = 0;
